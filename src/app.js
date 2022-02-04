@@ -67,12 +67,6 @@ app.get("/weather", (req, res) => {
       });
     }
   );
-
-  // res.send({
-  //   forecast: req.query.forecast,
-  //   location: req.query.location,
-  //   address: req.query.address,
-  // });
 });
 
 app.get("/products", (req, res) => {
@@ -102,6 +96,7 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is up on 3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log("Server is up on" + PORT);
 });
