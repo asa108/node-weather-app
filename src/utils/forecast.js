@@ -19,7 +19,9 @@ const forecast = (latitude, longitude, callback) => {
         body.current.weather_descriptions[0] +
           ". It is currently " +
           body.current.temperature +
-          " degress out."
+          " degress out." +
+          " The humidity is " +
+          body.current.humidity
       );
     }
   });
